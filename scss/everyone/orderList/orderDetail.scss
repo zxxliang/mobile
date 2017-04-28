@@ -1,0 +1,320 @@
+
+
+/*一些公共样式的引入*/
+@import "../../base/base";
+
+//开始
+html,body {
+  width: 100%;
+  height: 100%;
+}
+
+/*头部信息*/
+.head {
+  .img {
+    height: 120px;
+    width: 100%;
+    @include bg-img( 'orderdetail1.png' );
+  }
+  .word {
+    height: 60px;
+    border-bottom: 5px solid $e5;
+    padding: 10px 5px;
+    //border-top: 1px solid #000;
+    .word-img {
+      width: 20px;
+      height: 26px;
+      margin-top: 16px;
+      float: left;
+      margin-right: 10px;
+      @include bg-img( 'orderdetail3.png' );
+    }
+    .word-word {
+      @include hidden;
+      height: 60px;
+
+      .contact {
+        height: 20px;
+        line-height: 20px;
+        @include hidden;
+        @include font( 16px );
+      }
+      .address {
+        height: 40px;
+        @include font( 14px );
+      }
+    }
+  }
+}
+/*引入项目公共部分之 订单详情*/
+@import "../../components/shopping-list";
+/*价格详情*/
+.some-price {
+  padding: 0px 10px;
+  .price-classify {
+    @include line-height( 30px );
+    @include font-color( 14px , $grey );
+  }
+  .price-all {
+    @include line-height( 50px );
+    @include font( 18px  );
+    border-top: 1px solid $e5;
+    .fr {
+        color: $ju;
+    }
+  }
+}
+/*加入购物车*/
+.car-in {
+  @include line-height( 70px );
+  text-align: center;
+  border-top: 5px solid $e5;
+  border-bottom: 5px solid $e5;
+  button {
+    width: 60%;
+    height: 50%;
+    @include bg-color( $topic );
+    color: $fff;
+    border-radius: 5px;
+  }
+}
+/*订单信息*/
+.information {
+  padding: 10px 10px;
+  color: $f8;
+  .info-detail {
+    @include line-height( 25px );
+    .btn {
+      border: $line;
+      @include bg-color( $fff );
+      @include wh( 50px , 20px);
+      @include font( 12px );
+      color: $f8;
+      border-radius: 5px;
+
+    }
+  }
+}
+/*其他商品介绍*/
+.else-need {
+  border-top: 3px solid $e5;
+  @include bg-color( #EEEEEE );
+  .caption {
+    @include line-height( 50px );
+    text-align: center;
+    @include font( 16px );
+    color: $f8;
+      span {
+        vertical-align: middle;
+      }
+    .red-heart {
+      @include wh( 22px, 20px );
+      @include bg-img( 'orderdetail4.png' );
+      display: inline-block;
+    }
+  }
+  @media screen and ( max-width: 319px ) {
+      .content-detail {
+        margin-bottom: 6px;
+        box-sizing: border-box;
+        width: 49%;
+        height: 135px;
+        padding: 5px;
+        @include bg-color( $fff );
+        .content-img {
+          width: 100%;
+          @include bg-img( 'orderdetail2.png' );
+          height: 70%;
+        }
+        .content-word {
+          width: 100%;
+          p {
+            @include line-height( 20px );
+            overflow: hidden;
+          }
+          .word-top {
+            span:nth-child(1){
+              @include font( 16px );
+            }
+            span:nth-child(2){
+              color: $grey;
+              .min {
+                display: none;
+              }
+            }
+          }
+          .word-bottom {
+            >.word-img {
+              display: inline-block;
+              width: 15px;
+              height: 14px;
+              @include bg-img( 'orderdetail5.png' );
+            }
+            span:nth-child( 2 ){
+              @include font-color( 16px,$ju );
+              margin-right: 15px;
+            }
+            span:nth-child( 3 ){
+              text-decoration: line-through;
+              color: $grey;
+            }
+          }
+        }
+      }
+      .detail-fl {
+        margin-right: 2%;
+      }
+  }
+  @media screen and ( min-width: 320px ) and ( max-width: 375px ) {
+      .content-detail {
+        box-sizing: border-box;
+        width: 49%;
+        height: 160px;
+        padding: 5px;
+        @include bg-color( $fff );
+        .content-img {
+          width: 100%;
+          height: 70%;
+          @include bg-img( 'orderdetail2.png' );
+        }
+        .content-word {
+          width: 100%;
+          p {
+            @include line-height( 20px );
+            overflow: hidden;
+          }
+          .word-top {
+            span:nth-child(1){
+              @include font( 16px );
+            }
+            span:nth-child(2){
+              color: $grey;
+              .has {
+                display: none;
+              }
+            }
+          }
+          .word-bottom {
+            >.word-img {
+              display: inline-block;
+              width: 15px;
+              height: 14px;
+              @include bg-img( 'orderdetail5.png' );
+            }
+            span:nth-child( 2 ){
+              @include font-color( 16px,$ju );
+              margin-right: 15px;
+            }
+            span:nth-child( 3 ){
+              text-decoration: line-through;
+              color: $grey;
+            }
+          }
+        }
+      }
+      .detail-fl {
+        margin-right: 2%;
+      }
+  }
+  @media screen and ( min-width: 375px ) and ( max-width: 414px ) {
+      .content-detail {
+        box-sizing: border-box;
+        width: 49%;
+        height: 180px;
+        padding: 5px;
+        @include bg-color( $fff );
+        .content-img {
+          width: 100%;
+          height: 70%;
+          @include bg-img( 'orderdetail2.png' );
+        }
+        .content-word {
+          width: 100%;
+          p {
+            @include line-height( 25px );
+            overflow: hidden;
+          }
+          .word-top {
+            span:nth-child(1){
+              @include font( 18px );
+            }
+            span:nth-child(2){
+              color: $grey;
+            }
+          }
+          .word-bottom {
+            >.word-img {
+              display: inline-block;
+              width: 15px;
+              height: 14px;
+              @include bg-img( 'orderdetail5.png' );
+            }
+            span:nth-child( 2 ){
+              @include font-color( 18px,$ju );
+              margin-right: 20px;
+            }
+            span:nth-child( 3 ){
+              text-decoration: line-through;
+              color: $grey;
+            }
+          }
+        }
+      }
+      .detail-fl {
+        margin-right: 2%;
+      }
+  }
+  @media screen and ( min-width: 414px ) {
+      .content-detail {
+        box-sizing: border-box;
+        width: 49.5%;
+        height: 210px;
+        padding: 5px;
+        @include bg-color( $fff );
+        .content-img {
+          width: 100%;
+          height: 70%;
+          @include bg-img( 'orderdetail2.png' );
+        }
+        .content-word {
+          width: 100%;
+          //height: 50px;
+          p {
+            @include line-height( 35px );
+            overflow: hidden;
+          }
+          .word-top {
+            span:nth-child(1){
+              @include font( 20px );
+            }
+            span:nth-child(2){
+              color: $grey;
+              @include font( 14px );
+            }
+          }
+          .word-bottom {
+            >.word-img {
+              display: inline-block;
+              width: 15px;
+              height: 14px;
+              @include bg-img( 'orderdetail5.png' );
+              margin-right: 10px;
+            }
+            span:nth-child( 2 ){
+              @include font-color( 22px,$ju );
+              margin-right: 30px;
+            }
+            span:nth-child( 3 ){
+              text-decoration: line-through;
+              color: $grey;
+              @include font( 14px );
+            }
+          }
+        }
+      }
+      .detail-fl {
+        margin-right: 1%;
+      }
+    }
+}
+

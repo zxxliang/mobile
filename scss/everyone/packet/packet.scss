@@ -1,0 +1,286 @@
+
+@charset "UTF-8";
+
+@mixin bg-img( $image ){
+  background: url("../../../images/"+ $image +"") no-repeat center center;
+  background-size: cover;
+}
+
+/* 开始的头部*/
+@import "../../base/base";
+.topic-color {
+  border-bottom: 3px solid $topic;
+}
+html,body {
+  width: 100%;
+  height: 100%;
+}
+
+@media screen and ( max-width:  319px ){
+  header {
+    .list {
+      height: 50px;
+      border-bottom: $line;
+      li {
+        box-sizing: border-box;
+        text-align: center;
+        width: 33.3%;
+        @include line-height( 50px );
+        @include font( 18px );
+      }
+    }
+  }
+  .red-bag {
+    padding: 0 15px;
+    .remind {
+      height: 50px;
+      .remind-public {
+        @include line-height( 50px );
+        >span {
+          vertical-align: middle;
+        }
+        .ellipse {
+          width: 30px;
+          height: 13px;
+          background-color: #30CBBD;
+          border-radius: 10px;
+          display: inline-block;
+          .circle {
+            @include wh( 13px,13px );
+            border-radius: 50%;
+            background-color: #fff;
+          }
+        }
+        img {
+          height: 15px;
+        }
+      }
+    }
+    .bag-structure {
+      height: 80px;
+      background-color: #FFBD4A;
+      position: relative;
+      box-shadow: 0px 1px 1px 0px #b05b00;
+      .structure-left {
+        height: 80px;
+        width: 50%;
+        //border: 1px solid #000;
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        background: url("../../../images/red1.png") no-repeat center center;
+        background-size: contain;
+      }
+      .structure-right {
+        margin-right: 15px;
+        float: right;
+        width: 75%;
+        height: 80px;
+        background-color: #FF4F23;
+        border-radius: 60px 0px 0px 60px;
+      }
+    }
+  }
+}
+
+@media screen and( min-width: 320px ) and ( max-width:  375px ){
+  header {
+    .list {
+      height: 50px;
+      border-bottom: $line;
+      li {
+        box-sizing: border-box;
+        text-align: center;
+        width: 33.3%;
+        @include line-height( 50px );
+        @include font( 18px );
+      }
+    }
+  }
+  .red-bag {
+    padding: 0 15px;
+    .remind {
+      height: 50px;
+      .remind-public {
+        @include line-height( 50px );
+        >span {
+          vertical-align: middle;
+        }
+        .ellipse {
+          width: 30px;
+          height: 13px;
+          background-color: #30CBBD;
+          border-radius: 10px;
+          display: inline-block;
+          .circle {
+            @include wh( 13px,13px );
+            border-radius: 50%;
+            background-color: #fff;
+          }
+        }
+        img {
+          height: 15px;
+        }
+      }
+    }
+    .bag-structure {
+      height: 100px;
+      background-color: #FFBD4A;
+      position: relative;
+      box-shadow: 0px 1px 1px 0px #b05b00;
+      .structure-left {
+        height: 100px;
+        width: 50%;
+        //border: 1px solid #000;
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        background: url("../../../images/red1.png") no-repeat center center;
+        background-size: contain;
+      }
+      .structure-right {
+        margin-right: 15px;
+        float: right;
+        width: 75%;
+        height: 100px;
+        background-color: #FF4F23;
+        border-radius: 60px 0px 0px 60px;
+      }
+    }
+  }
+}
+
+@media screen and( min-width: 375px ) and ( max-width:  414px ){
+  header {
+    .list {
+      height: 50px;
+      border-bottom: $line;
+      li {
+        box-sizing: border-box;
+        text-align: center;
+        width: 33.3%;
+        @include line-height( 50px );
+        @include font( 18px );
+      }
+    }
+  }
+  .red-bag {
+    padding: 0 15px;
+    .remind {
+      height: 50px;
+      .remind-public {
+        @include line-height( 50px );
+        >span {
+          vertical-align: middle;
+        }
+        .ellipse {
+          width: 30px;
+          height: 13px;
+          background-color: #30CBBD;
+          border-radius: 10px;
+          display: inline-block;
+          .circle {
+            @include wh( 13px,13px );
+            border-radius: 50%;
+            background-color: #fff;
+          }
+        }
+        img {
+          height: 15px;
+        }
+      }
+    }
+    .bag-structure {
+      height: 120px;
+      background-color: #FFBD4A;
+      position: relative;
+      box-shadow: 0px 1px 1px 0px #b05b00;
+      .structure-left {
+        height: 120px;
+        width: 50%;
+        //border: 1px solid #000;
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        background: url("../../../images/red1.png") no-repeat center center;
+        background-size: contain;
+      }
+      .structure-right {
+        margin-right: 15px;
+        float: right;
+        width: 75%;
+        height: 120px;
+        background-color: #FF4F23;
+        border-radius: 60px 0px 0px 60px;
+      }
+    }
+  }
+}
+
+@media screen and( min-width: 415px ){
+  header {
+    .list {
+      height: 50px;
+      border-bottom: $line;
+      li {
+        box-sizing: border-box;
+        text-align: center;
+        width: 33.3%;
+        @include line-height( 50px );
+        @include font( 18px );
+      }
+    }
+  }
+  .red-bag {
+    padding: 0 15px;
+    .remind {
+      height: 50px;
+      .remind-public {
+        @include line-height( 50px );
+        >span {
+          vertical-align: middle;
+        }
+        .ellipse {
+          width: 30px;
+          height: 13px;
+          background-color: #30CBBD;
+          border-radius: 10px;
+          display: inline-block;
+          .circle {
+            @include wh( 13px,13px );
+            border-radius: 50%;
+            background-color: #fff;
+          }
+        }
+        img {
+          height: 15px;
+        }
+      }
+    }
+    .bag-structure {
+      height: 140px;
+      background-color: #FFBD4A;
+      position: relative;
+      box-shadow: 0px 1px 1px 0px #b05b00;
+      .structure-left {
+        height: 140px;
+        width: 50%;
+        //border: 1px solid #000;
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        background: url("../../../images/red1.png") no-repeat center center;
+        background-size: contain;
+      }
+      .structure-right {
+        margin-right: 15px;
+        float: right;
+        width: 75%;
+        height: 140px;
+        background-color: #FF4F23;
+        border-radius: 60px 0px 0px 60px;
+      }
+    }
+  }
+}
+

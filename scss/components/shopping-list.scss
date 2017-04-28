@@ -1,0 +1,50 @@
+
+//关于 商品的列表
+.detail {
+  .caption {
+    height: 40px;
+    line-height: 40px;
+    border-bottom: 1px solid $e5;
+    p {
+      margin-left: 10px;
+      @include font( 14px );
+    }
+  }
+  .detail-content {
+    .detail-content-per {
+      height: 80px;
+      border-bottom: 1px solid $e5;
+      padding: 10px;
+      @include bg-color( #fafafa );
+      .fl-img {
+        width: 110px;
+        height: 80px;
+        @include bg-img( 'orderdetail2.png' );
+        margin-right: 10px;
+
+      }
+      .fr-word {
+        @include hidden;
+        //border: 1px solid #000;
+        height: 80px;
+        padding-right: 20px;
+
+        p {
+          @include line-height( 27px );
+          @include hidden;
+        }
+        p:nth-child(1){
+          @include font( 20px );
+        }
+        p:nth-child(2){
+          @include font( 14px );
+          color : $grey;
+        }
+        p:nth-child(3)>.fl{
+          @include font( 20px );
+          color: $ju;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,40 @@
+
+//共用部分
+
+$grey : #cccccc;
+$topic : #DD137B;
+$ju : #FE9E10;
+$fff: #fff;
+$f8: #8F8F8F;
+$e5: #E5E5E5;
+$line : 1px solid #E5E5E5;
+@mixin wh( $width,$height ){
+  width: $width;
+  height: $height;
+}
+@mixin hidden {
+  overflow: hidden;
+}
+@mixin font( $size ) {
+  font-size: $size;
+}
+@mixin font-color ( $size,$color ) {
+  font-size: $size;
+  color: $color;
+}
+@mixin line-height( $size ){
+  height: $size;
+  line-height: $size;
+}
+@mixin bg-color( $color ) {
+  background-color: $color;
+}
+@mixin bg-img( $image ){
+  background: url("../../../images/"+ $image +"") no-repeat center center;
+  background-size: cover;
+}
+//@mixin bg-img-contain( $image ){
+//  background: url("../../../images/"+ $image +"") no-repeat center center;
+//  background-size: contain;
+//}
+

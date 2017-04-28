@@ -1,0 +1,1126 @@
+
+
+@import "../../base/base";
+
+$line-base : 1px solid #EEEEEE;
+
+html,body {
+  @include wh( 100%,100% );
+}
+.header {
+  height: 30px;
+  padding: 5px 20px;
+  border-bottom: $line-base;
+  .left {
+    @include wh( 85%,30px );
+    position: relative;
+    input {
+      //@include wh( 100%,100% );
+      width: 100%;
+      @include line-height( 30px );
+      border-radius: 20px;
+      border: 1px solid #cccccc;
+      padding-left: 30px;
+      padding-right: 20px;
+      font-size: 14px;
+    }
+    .search {
+      @include wh( 20px,20px );
+      @include bg-img( 'index2.png' );
+      position: absolute;
+      left: 10px;
+      top: 5px;
+    }
+    button {
+      position: absolute;
+      right: 10px;
+      top: 3px;
+      height: 24px;
+      font-size: 16px;
+      color: #cccccc;
+      width: 60px;
+      background-color: #fff;
+      border-left: 1px solid #cccccc;
+      //border-radius: 3px;
+    }
+  }
+  .right {
+    @include wh( 28px,31px );
+    a {
+      display: block;
+      @include wh( 100%,100% );
+      @include bg-img( 'index3.png' );
+    }
+  }
+}
+@media screen and ( max-width: 319px ){
+  .ad {
+    height: 100px;
+    @include bg-img( 'index5.png' );
+  }
+  /*商品类别栏*/
+  /*li的下边框*/
+  .banner .bor {
+    border-bottom: 4px solid #DD127B;
+    color: #DC137B;
+  }
+  .banner {
+    @include wh( 100%,40px );
+    overflow-x: auto;
+    white-space: nowrap;
+    ul {
+      @include wh( 200%,40px );
+      li {
+        float: left;
+        width: 60px;
+        @include line-height( 36px );
+        color: #666666;
+        font-size: 13px;
+        text-align: center;
+      }
+    }
+  }
+  .line {
+    width: 100%;
+    height: 2px;
+    border-top: 1px solid #D6D6D6;
+    border-bottom: 1px solid #D6D6D6;
+    background-color: #EEEEEE;
+    margin-top: -4px;
+  }
+  .shopping {
+    .outside {
+      border-bottom: $line-base;
+      padding: 10px 10px;
+    }
+    .shopping-img {
+      @include wh( 25%,80px );
+      //@include bg-img( 'index4.png' );
+      background: url("../../../images/index4.png") no-repeat center center;
+      background-size: contain;
+    }
+    .shopping-content {
+      width: 60%;
+      .content-top {
+        padding-left: 10px;
+        @include line-height( 25px );
+        @include font( 14px );
+      }
+      .content-mid {
+        padding-left: 10px;
+        @include line-height( 25px );
+        margin: 5px 0px;
+        .mid-one {
+          width: 13px;
+          height: 13px;
+          display: inline-block;
+          @include bg-img( 'index1.png' );
+        }
+        .mid-two {
+          font-size: 18px;
+          color: $ju;
+        }
+        .mid-three {
+          color: $grey;
+          text-decoration: line-through;
+        }
+        .mid-four {
+          color: $grey;
+        }
+      }
+      .content-bottom {
+        padding-left: 10px;
+        .bottom-one {
+          width: 13px;
+          height: 13px;
+          display: block;
+          @include bg-img( 'index7.png' );
+          margin-right: 5px;
+        }
+        .bottom-two {
+          color: $grey;
+          display: block;
+          overflow: hidden;
+        }
+      }
+    }
+    .shopping-car {
+      @include wh( 15%,80px );
+      .car {
+        @include wh( 35px,35px);
+        margin: 45px auto;
+        @include bg-img( 'index6.png' );
+      }
+    }
+  }
+  .popup {
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background: rgba( 0,0,0,0.4);
+    z-index: 100;
+    .popup-content {
+      width: 100%;
+      height: 420px;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      @include bg-color( #fff );
+      .popup-content-top {
+        height: 120px;
+        position: relative;
+        .top-left {
+          @include wh( 150px,150px );
+          position: absolute;
+          left: 10px;
+          bottom: 0px;
+          @include bg-color( #fff );
+          border-radius: 10px;
+          box-sizing: border-box;
+          padding: 8px;
+          box-shadow: 3px 3px 10px rgba( 91,91,91,0.1);
+          .left-img {
+            width: 100%;
+            height: 100%;
+            @include bg-img( 'index4.png' );
+          }
+        }
+        .top-right {
+          margin-left: 195px;
+          margin-top: 15px;
+          @include wh( 100px,70px );
+          p {
+            @include line-height( 35px );
+          }
+          .mid-num {
+            span:nth-child(1) {
+              font-size: 25px;
+              color: $ju;
+              margin-right: 10px;
+            }
+            span:nth-child(2) {
+              font-size: 17px;
+              color: $grey;
+              text-decoration: line-through;
+            }
+          }
+          .mid-word {
+            font-size: 20px;
+          }
+        }
+      }
+      .popup-content-mid {
+        //overflow-Y: auto;
+        //white-space: nowrap;
+        width: 100%;
+        //height: 160px;
+        .standard {
+          //height: 70px;
+          padding: 10px 0px;
+          box-shadow: 3px 0px 10px rgba( 91,91,91,0.1);
+          p {
+            @include font( 16px );
+            margin-left: 10px;
+            margin-bottom: 10px;
+          }
+          .standard-some {
+            padding: 0 6%;
+            //@include line-height( 42px );
+            overflow: hidden;
+            //margin-bottom: 10px;
+            >span {
+              display: inline-block;
+              border: 1px solid #cccccc;
+              height: 30px;
+              line-height: 30px;
+              text-align: center;
+              width: 25%;
+              font-size: 16px;
+              border-radius: 5px;
+              color: #cccccc;
+              margin-bottom: 10px;
+            }
+            span:nth-child(2) {
+              margin: 0 9%;
+            }
+            span:nth-child(5) {
+              margin: 0 9%;
+            }
+            span:nth-child(4),span:nth-child(6) {
+              margin-bottom: 12px;
+            }
+          }
+        }
+      }
+      .buy-num {
+        height: 30px;
+        padding: 20px 10px;
+        >span:nth-child(1) {
+          @include font( 16px );
+        }
+        >span:nth-child(2) {
+          display: none;
+        }
+        .number {
+          display: inline-block;
+          float: right;
+          .symbol {
+            display: inline-block;
+            @include wh( 22px,22px );
+            border : 1px solid $topic;
+            border-radius: 50px;
+            vertical-align: middle;
+          }
+          .subtrack {
+            @include bg-img( 'index9.png');
+          }
+          .add {
+            @include bg-img( 'index8.png');
+          }
+          input {
+            @include line-height( 25px );
+            text-align: center;
+            width: 55px;
+            border : 1px solid $topic;
+            vertical-align: middle;
+            border-radius: 5px;
+            font-size: 16px;
+            margin: 0 5px;
+          }
+        }
+      }
+      .popup-content-bott {
+        width: 100%;
+        height: 50px;
+        border-top: $line-base;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        font-size: 16px;
+        color: #FFE5DE;
+        .bott-cancel {
+          height: 50px;
+          line-height: 50px;
+          text-align: center;
+          width: 50%;
+          background: linear-gradient( to right , #FFC801 , #FEA301 );
+          background: -webkit-linear-gradient( to right , #FFC801 , #FEA301 );
+          background: -moz-linear-gradient( to right , #FFC801 , #FEA301 );
+        }
+        .bott-car {
+          height: 50px;
+          line-height: 50px;
+          text-align: center;
+          width: 50%;
+          background: linear-gradient( to right , #FF7300 , #FF4B00 );
+          background: -webkit-linear-gradient( to right , #FF7300 , #FF4B00 );
+          background: -moz-linear-gradient( to right , #FF7300 , #FF4B00 );
+        }
+      }
+    }
+  }
+}
+@media screen and ( min-width: 320px ) and ( max-width: 375px ){
+  .ad {
+    height: 120px;
+    @include bg-img( 'index5.png' );
+  }
+  .banner .bor {
+    border-bottom: 4px solid #DD127B;
+    color: #DC137B;
+  }
+  .banner {
+    @include wh( 100%,50px );
+    overflow-x: auto;
+    white-space: nowrap;
+    ul {
+      @include wh( 200%,50px );
+      li {
+        float: left;
+        width: 60px;
+        @include line-height( 46px );
+        color: #666666;
+        font-size: 13px;
+        text-align: center;
+      }
+    }
+  }
+  .line {
+    width: 100%;
+    height: 2px;
+    border-top: 1px solid #D6D6D6;
+    border-bottom: 1px solid #D6D6D6;
+    background-color: #EEEEEE;
+    margin-top: -4px;
+  }
+  .shopping {
+    .outside {
+      border-bottom: $line-base;
+      padding: 10px 10px;
+    }
+    .shopping-img {
+      @include wh( 25%,100px );
+      background: url("../../../images/index4.png") no-repeat center center;
+      background-size: contain;
+    }
+    .shopping-content {
+      width: 60%;
+      .content-top {
+        padding-left: 10px;
+        @include line-height( 25px );
+        @include font( 15px );
+      }
+      .content-mid {
+        padding-left: 10px;
+        @include line-height( 25px );
+        margin: 10px 0px;
+        .mid-one {
+          width: 13px;
+          height: 13px;
+          display: inline-block;
+          @include bg-img( 'index1.png' );
+        }
+        .mid-two {
+          font-size: 19px;
+          color: $ju;
+        }
+        .mid-three {
+          color: $grey;
+          text-decoration: line-through;
+        }
+        .mid-four {
+          color: $grey;
+        }
+      }
+      .content-bottom {
+        padding-left: 10px;
+        .bottom-one {
+          width: 14px;
+          height: 14px;
+          display: block;
+          @include bg-img( 'index7.png' );
+          margin-right: 5px;
+        }
+        .bottom-two {
+          color: $grey;
+          display: block;
+          overflow: hidden;
+        }
+      }
+    }
+    .shopping-car {
+      .car {
+        @include wh( 40px,40px);
+        margin: 60px auto;
+        @include bg-img( 'index6.png' );
+      }
+    }
+  }
+  .popup {
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background: rgba( 0,0,0,0.4);
+    z-index: 100;
+    .popup-content {
+      width: 100%;
+      height: 420px;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      @include bg-color( #fff );
+      .popup-content-top {
+        height: 120px;
+        position: relative;
+        .top-left {
+          @include wh( 150px,150px );
+          position: absolute;
+          left: 10px;
+          bottom: 0px;
+          @include bg-color( #fff );
+          border-radius: 10px;
+          box-sizing: border-box;
+          padding: 8px;
+          box-shadow: 3px 3px 10px rgba( 91,91,91,0.1);
+          .left-img {
+            width: 100%;
+            height: 100%;
+            @include bg-img( 'index4.png' );
+          }
+        }
+        .top-right {
+          margin-left: 195px;
+          margin-top: 15px;
+          @include wh( 100px,70px );
+          p {
+            @include line-height( 35px );
+          }
+          .mid-num {
+            span:nth-child(1) {
+              font-size: 25px;
+              color: $ju;
+              margin-right: 10px;
+            }
+            span:nth-child(2) {
+              font-size: 17px;
+              color: $grey;
+              text-decoration: line-through;
+            }
+          }
+          .mid-word {
+            font-size: 20px;
+          }
+        }
+      }
+      .popup-content-mid {
+         //overflow-Y: auto;
+         //white-space: nowrap;
+         width: 100%;
+         height: 160px;
+         .standard {
+           //height: 70px;
+           padding: 10px 0px;
+           box-shadow: 3px 0px 10px rgba( 91,91,91,0.1);
+           p {
+             @include font( 16px );
+             margin-left: 10px;
+             margin-bottom: 10px;
+           }
+           .standard-some {
+             padding: 0 6%;
+             //@include line-height( 42px );
+             overflow: hidden;
+             //margin-bottom: 10px;
+             >span {
+               display: inline-block;
+               border: 1px solid #cccccc;
+               height: 30px;
+               line-height: 30px;
+               text-align: center;
+               width: 25%;
+               font-size: 18px;
+               border-radius: 5px;
+               color: #cccccc;
+               margin-bottom: 10px;
+             }
+             span:nth-child(2) {
+               margin: 0 9%;
+             }
+             span:nth-child(5) {
+               margin: 0 9%;
+             }
+           }
+         }
+       }
+      .buy-num {
+        height: 30px;
+        padding: 20px 10px;
+        >span:nth-child(1) {
+          @include font( 16px );
+        }
+        .number {
+          display: inline-block;
+          float: right;
+          .symbol {
+            display: inline-block;
+            @include wh( 22px,22px );
+            border : 1px solid $topic;
+            border-radius: 50px;
+            vertical-align: middle;
+          }
+          .subtrack {
+            @include bg-img( 'index9.png');
+          }
+          .add {
+            @include bg-img( 'index8.png');
+          }
+          input {
+            @include line-height( 25px );
+            text-align: center;
+            width: 55px;
+            border : 1px solid $topic;
+            vertical-align: middle;
+            border-radius: 5px;
+            font-size: 16px;
+            //margin: 0 5px;
+          }
+        }
+      }
+      .popup-content-bott {
+        width: 100%;
+        height: 50px;
+        border-top: $line-base;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        font-size: 16px;
+        color: #FFE5DE;
+        .bott-cancel {
+          height: 50px;
+          line-height: 50px;
+          text-align: center;
+          width: 50%;
+          background: linear-gradient( to right , #FFC801 , #FEA301 );
+          background: -webkit-linear-gradient( to right , #FFC801 , #FEA301 );
+          background: -moz-linear-gradient( to right , #FFC801 , #FEA301 );
+        }
+        .bott-car {
+          height: 50px;
+          line-height: 50px;
+          text-align: center;
+          width: 50%;
+          background: linear-gradient( to right , #FF7300 , #FF4B00 );
+          background: -webkit-linear-gradient( to right , #FF7300 , #FF4B00 );
+          background: -moz-linear-gradient( to right , #FF7300 , #FF4B00 );
+        }
+      }
+    }
+  }
+}
+@media screen and ( min-width: 375px ) and ( max-width: 414px ){
+  .ad {
+    height: 130px;
+    @include bg-img( 'index5.png' );
+  }
+  .banner .bor {
+    border-bottom: 4px solid #DD127B;
+    color: #DC137B;
+  }
+  .banner {
+    @include wh( 100%,50px );
+    overflow-x: auto;
+    white-space: nowrap;
+    ul {
+      @include wh( 200%,50px );
+      li {
+        float: left;
+        width: 70px;
+        @include line-height( 46px );
+        color: #666666;
+        font-size: 14px;
+        text-align: center;
+      }
+    }
+  }
+  .line {
+    width: 100%;
+    height: 2px;
+    border-top: 1px solid #D6D6D6;
+    border-bottom: 1px solid #D6D6D6;
+    background-color: #EEEEEE;
+    margin-top: -4px;
+  }
+  .shopping {
+    .outside {
+      border-bottom: $line-base;
+      padding: 10px 10px;
+    }
+    .shopping-img {
+      @include wh( 25%,100px );
+      background: url("../../../images/index4.png") no-repeat center center;
+      background-size: contain;
+    }
+    .shopping-content {
+      width: 60%;
+      .content-top {
+        padding-left: 10px;
+        @include line-height( 25px );
+        @include font( 16px );
+      }
+      .content-mid {
+        padding-left: 10px;
+        @include line-height( 25px );
+        margin: 10px 0px;
+        .mid-one {
+          width: 13px;
+          height: 13px;
+          display: inline-block;
+          @include bg-img( 'index1.png' );
+        }
+        .mid-two {
+          font-size: 20px;
+          color: $ju;
+        }
+        .mid-three {
+          color: $grey;
+          text-decoration: line-through;
+        }
+        .mid-four {
+          color: $grey;
+        }
+      }
+      .content-bottom {
+        padding-left: 10px;
+        .bottom-one {
+          width: 13px;
+          height: 13px;
+          display: block;
+          @include bg-img( 'index7.png' );
+          margin-right: 5px;
+        }
+        .bottom-two {
+          color: $grey;
+          display: block;
+          overflow: hidden;
+        }
+      }
+    }
+    .shopping-car {
+      @include wh( 15%,100px );
+      .car {
+        @include wh( 40px,40px);
+        margin: 60px auto;
+        @include bg-img( 'index6.png' );
+      }
+    }
+  }
+  .popup {
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background: rgba( 0,0,0,0.4);
+    z-index: 100;
+    .popup-content {
+      width: 100%;
+      height: 420px;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      @include bg-color( #fff );
+      .popup-content-top {
+        height: 140px;
+        position: relative;
+        .top-left {
+          @include wh( 170px,170px );
+          position: absolute;
+          left: 10px;
+          bottom: 0px;
+          @include bg-color( #fff );
+          border-radius: 10px;
+          box-sizing: border-box;
+          padding: 8px;
+          box-shadow: 3px 3px 10px rgba( 91,91,91,0.1);
+          .left-img {
+            width: 100%;
+            height: 100%;
+            @include bg-img( 'index4.png' );
+          }
+        }
+        .top-right {
+          margin-left: 215px;
+          margin-top: 15px;
+          @include wh( 100px,70px );
+          p {
+            @include line-height( 40px );
+          }
+          .mid-num {
+            span:nth-child(1) {
+              font-size: 25px;
+              color: $ju;
+              margin-right: 10px;
+            }
+            span:nth-child(2) {
+              font-size: 17px;
+              color: $grey;
+              text-decoration: line-through;
+            }
+          }
+          .mid-word {
+            font-size: 20px;
+          }
+        }
+      }
+      .popup-content-mid {
+        //overflow-Y: auto;
+        //white-space: nowrap;
+        width: 100%;
+        height: 160px;
+        .standard {
+          //height: 70px;
+          padding: 10px 0px;
+          box-shadow: 3px 0px 10px rgba( 91,91,91,0.1);
+          p {
+            @include font( 16px );
+            margin-left: 10px;
+            margin-bottom: 10px;
+          }
+          .standard-some {
+            padding: 0 6%;
+            //@include line-height( 42px );
+            overflow: hidden;
+            //margin-bottom: 10px;
+            >span {
+              display: inline-block;
+              border: 1px solid #cccccc;
+              height: 35px;
+              line-height: 35px;
+              text-align: center;
+              width: 25%;
+              font-size: 18px;
+              border-radius: 5px;
+              color: #cccccc;
+              margin-bottom: 10px;
+            }
+            span:nth-child(2) {
+              margin: 0 9%;
+            }
+            span:nth-child(5) {
+              margin: 0 9%;
+            }
+          }
+        }
+      }
+      .buy-num {
+        height: 30px;
+        padding: 20px 10px;
+        >span:nth-child(1) {
+          @include font( 18px );
+        }
+        .number {
+          display: inline-block;
+          float: right;
+          .symbol {
+            display: inline-block;
+            @include wh( 22px,22px );
+            border : 1px solid $topic;
+            border-radius: 50px;
+            vertical-align: middle;
+          }
+          .subtrack {
+            @include bg-img( 'index9.png');
+          }
+          .add {
+            @include bg-img( 'index8.png');
+          }
+          input {
+            @include line-height( 25px );
+            text-align: center;
+            width: 55px;
+            border : 1px solid $topic;
+            vertical-align: middle;
+            border-radius: 5px;
+            font-size: 16px;
+            margin: 0 5px;
+          }
+        }
+      }
+      .popup-content-bott {
+        width: 100%;
+        height: 50px;
+        border-top: $line-base;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        font-size: 16px;
+        color: #FFE5DE;
+        .bott-cancel {
+          height: 50px;
+          line-height: 50px;
+          text-align: center;
+          width: 50%;
+          background: linear-gradient( to right , #FFC801 , #FEA301 );
+          background: -webkit-linear-gradient( to right , #FFC801 , #FEA301 );
+          background: -moz-linear-gradient( to right , #FFC801 , #FEA301 );
+        }
+        .bott-car {
+          height: 50px;
+          line-height: 50px;
+          text-align: center;
+          width: 50%;
+          background: linear-gradient( to right , #FF7300 , #FF4B00 );
+          background: -webkit-linear-gradient( to right , #FF7300 , #FF4B00 );
+          background: -moz-linear-gradient( to right , #FF7300 , #FF4B00 );
+        }
+      }
+    }
+  }
+}
+@media screen and ( min-width: 415px ) {
+  .ad {
+    height: 150px;
+    @include bg-img( 'index5.png' );
+  }
+  .banner .bor {
+    border-bottom: 4px solid #DD127B;
+    color: #DC137B;
+  }
+  .banner {
+    @include wh( 100%,50px );
+    overflow-x: auto;
+    white-space: nowrap;
+    ul {
+      @include wh( 200%,50px );
+      li {
+        float: left;
+        width: 75px;
+        @include line-height( 46px );
+        color: #666666;
+        font-size: 15px;
+        text-align: center;
+      }
+    }
+  }
+  .line {
+    width: 100%;
+    height: 2px;
+    border-top: 1px solid #D6D6D6;
+    border-bottom: 1px solid #D6D6D6;
+    background-color: #EEEEEE;
+    margin-top: -4px;
+  }
+  .shopping {
+    .outside {
+      border-bottom: $line-base;
+      padding: 10px 10px;
+    }
+    .shopping-img {
+      @include wh( 25%,120px );
+      background: url("../../../images/index4.png") no-repeat center center;
+      background-size: contain;
+    }
+    .shopping-content {
+      width: 60%;
+      .content-top {
+        padding-left: 10px;
+        @include line-height( 25px );
+        @include font( 18px );
+      }
+      .content-mid {
+        padding-left: 10px;
+        @include line-height( 25px );
+        margin: 10px 0px;
+        .mid-one {
+          width: 15px;
+          height: 15px;
+          display: inline-block;
+          @include bg-img( 'index1.png' );
+        }
+        .mid-two {
+          font-size: 22px;
+          color: $ju;
+        }
+        .mid-three {
+          color: $grey;
+          text-decoration: line-through;
+        }
+        .mid-four {
+          color: $grey;
+        }
+      }
+      .content-bottom {
+        padding-left: 10px;
+        .bottom-one {
+          width: 15px;
+          height: 15px;
+          display: block;
+          @include bg-img( 'index7.png' );
+          margin-right: 5px;
+        }
+        .bottom-two {
+          color: $grey;
+          font-size: 14px;
+          display: block;
+          overflow: hidden;
+        }
+      }
+    }
+    .shopping-car {
+      @include wh( 15%,120px );
+      .car {
+        @include wh( 45px,45px);
+        margin: 80px auto;
+        @include bg-img( 'index6.png' );
+      }
+    }
+  }
+  .popup {
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background: rgba( 0,0,0,0.4);
+    z-index: 100;
+    .popup-content {
+      width: 100%;
+      height: 420px;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      @include bg-color( #fff );
+      .popup-content-top {
+        height: 140px;
+        position: relative;
+        .top-left {
+          @include wh( 170px,170px );
+          position: absolute;
+          left: 12px;
+          bottom: 0px;
+          @include bg-color( #fff );
+          border-radius: 10px;
+          box-sizing: border-box;
+          padding: 8px;
+          box-shadow: 3px 3px 10px rgba( 91,91,91,0.1);
+          .left-img {
+            width: 100%;
+            height: 100%;
+            @include bg-img( 'index4.png' );
+          }
+        }
+        .top-right {
+          margin-left: 225px;
+          margin-top: 15px;
+          @include wh( 100px,70px );
+          p {
+            @include line-height( 45px );
+          }
+          .mid-num {
+            span:nth-child(1) {
+              font-size: 25px;
+              color: $ju;
+              margin-right: 10px;
+            }
+            span:nth-child(2) {
+              font-size: 17px;
+              color: $grey;
+              text-decoration: line-through;
+            }
+          }
+          .mid-word {
+            font-size: 20px;
+          }
+        }
+      }
+      .popup-content-mid {
+        //overflow-Y: auto;
+        //white-space: nowrap;
+        width: 100%;
+        height: 160px;
+        .standard {
+          //height: 70px;
+          padding: 10px 0px;
+          box-shadow: 3px 0px 10px rgba( 91,91,91,0.1);
+          p {
+            @include font( 16px );
+            margin-left: 10px;
+            margin-bottom: 10px;
+          }
+          .standard-some {
+            padding: 0 6%;
+            //@include line-height( 42px );
+            overflow: hidden;
+            //margin-bottom: 10px;
+            >span {
+              display: inline-block;
+              border: 1px solid #cccccc;
+              height: 40px;
+              line-height: 40px;
+              text-align: center;
+              width: 25%;
+              font-size: 18px;
+              border-radius: 5px;
+              color: #cccccc;
+              margin-bottom: 10px;
+            }
+            span:nth-child(2) {
+              margin: 0 9%;
+            }
+            span:nth-child(5) {
+              margin: 0 9%;
+            }
+          }
+        }
+      }
+      .buy-num {
+        height: 30px;
+        padding: 20px 10px;
+        >span:nth-child(1) {
+          @include font( 18px );
+        }
+        .number {
+          display: inline-block;
+          float: right;
+          .symbol {
+            display: inline-block;
+            @include wh( 22px,22px );
+            border : 1px solid $topic;
+            border-radius: 50px;
+            vertical-align: middle;
+          }
+          .subtrack {
+            @include bg-img( 'index9.png');
+          }
+          .add {
+            @include bg-img( 'index8.png');
+          }
+          input {
+            @include line-height( 25px );
+            text-align: center;
+            width: 65px;
+            border : 1px solid $topic;
+            vertical-align: middle;
+            border-radius: 5px;
+            font-size: 16px;
+            margin: 0 8px;
+          }
+        }
+      }
+      .popup-content-bott {
+        width: 100%;
+        height: 50px;
+        border-top: $line-base;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        font-size: 16px;
+        color: #FFE5DE;
+        .bott-cancel {
+          height: 50px;
+          line-height: 50px;
+          text-align: center;
+          width: 50%;
+          background: linear-gradient( to right , #FFC801 , #FEA301 );
+          background: -webkit-linear-gradient( to right , #FFC801 , #FEA301 );
+          background: -moz-linear-gradient( to right , #FFC801 , #FEA301 );
+        }
+        .bott-car {
+          height: 50px;
+          line-height: 50px;
+          text-align: center;
+          width: 50%;
+          background: linear-gradient( to right , #FF7300 , #FF4B00 );
+          background: -webkit-linear-gradient( to right , #FF7300 , #FF4B00 );
+          background: -moz-linear-gradient( to right , #FF7300 , #FF4B00 );
+        }
+      }
+    }
+  }
+}
+.show-car {
+  @include wh( 80px,80px );
+  position: fixed;
+  bottom: 0px;
+  left: 0px;
+  @include bg-img( 'index10.png' );
+  .show-num {
+    @include wh( 25px,25px );
+    background-color: $topic;
+    color: #fff;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    border-radius: 50%;
+    line-height: 25px;
+    text-align: center;
+  }
+}
